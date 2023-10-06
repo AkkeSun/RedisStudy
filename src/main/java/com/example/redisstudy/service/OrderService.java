@@ -24,7 +24,7 @@ public class OrderService {
         redisUtil.save(key, map);
     }
 
-    @Cacheable(value="orderInfo", key = "#id") // orderInfo:id
+    @Cacheable(value="orderInfo", key = "#id") // orderInfo::id
     public Order getOrder(int id) {
         System.out.println("캐시를 거치지 않은 데이터 입니다");
 

@@ -24,7 +24,7 @@ public class UserService {
         redisUtil.save(key, map);
     }
 
-    @Cacheable(value="userInfo", key = "#id") // userInfo:id
+    @Cacheable(value="userInfo", key = "#id") // userInfo::id
     public User getUser(int id) {
         System.out.println("캐시를 거치지 않은 데이터 입니다");
 
