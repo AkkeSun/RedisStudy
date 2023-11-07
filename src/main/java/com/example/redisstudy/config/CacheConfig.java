@@ -44,7 +44,7 @@ public class CacheConfig {
     private Map<String, RedisCacheConfiguration> customConfigurationMap() {
         Map<String, RedisCacheConfiguration> customConfigurationMap = new HashMap<>();
         customConfigurationMap.put("userInfo", defaultConfiguration().entryTtl(Duration.ofSeconds(3)));
-        customConfigurationMap.put("orderInfo", defaultConfiguration().entryTtl(Duration.ofDays(1)));
+       // customConfigurationMap.put("orderInfo", defaultConfiguration().entryTtl(Duration.ofDays(1)));
         return customConfigurationMap;
     }
 
