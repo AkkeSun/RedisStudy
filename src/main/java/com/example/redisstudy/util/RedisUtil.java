@@ -2,7 +2,7 @@ package com.example.redisstudy.util;
 
 import java.util.ArrayList;
 import java.util.List;
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.RequiredArgsConstructor;
 import org.springframework.data.redis.connection.RedisConnection;
 import org.springframework.data.redis.core.Cursor;
 import org.springframework.data.redis.core.RedisTemplate;
@@ -10,14 +10,10 @@ import org.springframework.data.redis.core.ScanOptions;
 import org.springframework.stereotype.Component;
 
 @Component
+@RequiredArgsConstructor
 public class RedisUtil {
 
-    private RedisTemplate<String, Object> redisTemplate;
-
-    @Autowired
-    public RedisUtil(RedisTemplate<String, Object> redisTemplate) {
-        this.redisTemplate = redisTemplate;
-    }
+    private final RedisTemplate<String, Object> redisTemplate;
 
     public void save (String key, String val) {
         redisTemplate.opsForValue().set(key, val);

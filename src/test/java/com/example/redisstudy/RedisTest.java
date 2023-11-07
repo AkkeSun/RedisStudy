@@ -1,8 +1,6 @@
 package com.example.redisstudy;
 
 import static org.mockito.Mockito.verify;
-import static org.mockito.Mockito.when;
-import static org.springframework.test.web.client.ExpectedCount.times;
 
 import com.example.redisstudy.domain.User;
 import com.example.redisstudy.service.CacheChecker;
